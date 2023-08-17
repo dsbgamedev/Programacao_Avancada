@@ -4,8 +4,7 @@
 //Variavel global
 global.texto = "Teste";
 
-
-
+global.cor = c_white;
 
 
 

@@ -3,7 +3,7 @@
 
 draw_self();
 //Desenhando o texto em um
-draw_set_color(c_red);
+draw_set_color(c_black);
 //Alinhando o texto
 draw_set_valign(1);
 draw_set_halign(1);
