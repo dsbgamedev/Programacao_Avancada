@@ -4,9 +4,13 @@
 draw_self();
 //Desenhando o texto em um
 draw_set_color(c_red);
+//Alinhando o texto
+draw_set_valign(1);
+draw_set_halign(1);
 draw_text(x,y, texto);
 //Resetando
 draw_set_color(c_white);
-
+draw_set_valign(0);
+draw_set_halign(0);
 
 
