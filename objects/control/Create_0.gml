@@ -6,7 +6,51 @@ global.texto = "Teste";
 
 global.cor = c_white;
 
+//Vetores 2D
+/*
+				Inventario
+	Armas    Itens       Equipamentos
+	Espada	 Laranja     Escudo
+	Cajado	 Chiclete	 Capacete
+	Punhal	 Sopa        Ombreira
+	Pedra	 Pedra       Pedra
+*/
 
+inventario = [
+				["Armas","Espada","Cajado","Punhaç","Pedras"],
+				["Itens","Laranja","Chiclete","Sopa","Pedra"],
+				["Equipamentos","Escudo","Capacete","Ombreira","Pedra"]
+			 ]
+			 show_message(inventario);
+
+
+categoria = 0;
+item = 1;
+
+
+/*
+//Categorias
+inventario [0][0] = "Armas";
+inventario [1][0] = "Itens";
+inventario [2][0] = "Equipamentos";
+//Armas
+inventario [0][1] = "Espada";
+inventario [0][2] = "Cajado";
+inventario [0][3] = "Punhal";
+inventario [0][4] = "Pedra";
+//Itens
+inventario [1] = ["Itens", "Laranja","Chiclete", "Sopa", "Pedra"];
+//Equipamentos
+inventario [2] = ["Equipamentos", "Escudo","Capacete", "Ombreira", "Pedra"];
+
+
+
+
+
+
+
+
+/*
 //Vetores Arrays
 //Uma variavel co varias informações dela
 
@@ -17,7 +61,7 @@ global.cor = c_white;
 //Eu vou salvar essa nota no vetor de notas
 //Se não, eu paro de perguntar as notas e calculo a media dele(soma os valores e divide)
 //E apresento a media do aluno
-
+/*
 notas = [];
 var _indice = 0;
 while(true)
@@ -70,6 +114,19 @@ for(var i=0; i < array_length(frutas); i++)
 	_botao.texto = frutas[i];
 }
 
+frutas = ["Morango","Banana","Uva","Morango","Limao"];
+
+//Pegando o tamanho da sprite
+var _largura = sprite_get_width(spr_botao);
+var _altura = sprite_get_height(spr_botao);
+var _espaco = 50;
+//Instanciando os botoes com o texto correto
+for(var i=0; i < array_length(frutas); i++)
+{
+	//instanciando o botao
+	var _botao = instance_create_layer(400,_espaco +( _altura * i) + _espaco * i ,layer, obj_botao);
+	_botao.texto = frutas[i];
+}
 
 
 /*
