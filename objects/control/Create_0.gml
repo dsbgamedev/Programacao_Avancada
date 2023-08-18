@@ -8,7 +8,7 @@ global.cor = c_white;
 
 //Perguntar uma senha para a pessoa
 //Enquanto a pessoa nao acertar a senha, eu vou continuar pedindo a senha
-
+/*
 var _senha = 0;
 var _senha_certa = 123;
 var _conta1 = "";
@@ -52,9 +52,58 @@ while(_senha != _senha_certa)
 	}
 	
 	
-}
+}*/
 //show_message("Voce acertou a senha...");
 
 //MOnte uma historia onde voce vai pedir informaçoes para o usuario ele so vai poder
 //avançar na historia caso ele acerte essas informações
 //fazendo 3 historias
+
+var _cont = 1994;
+var _texto = "";
+
+/*while(_cont != _texto)
+{
+	var _cont = get_integer("Qual foi o penultimo campeonato que o Brasil foi campeao mundial", 0);
+	if(_cont != 1994)
+	{
+		var cont = get_integer("Voce erro tente novamente:",0);
+	}
+	if(_cont == 1994)
+	{
+		show_message("Parabens, voce acertou");
+	}
+	else
+	{
+		continue;	
+	}
+	var _cont2 = get_string("Quem fez o gol da final da libertadores 2011 pelo Santos", 0);
+	if(_cont2 != "Neymar")
+	{
+		var cont2 = get_string("Voce erro tente novamente:",0);
+	}
+	if(_cont2 == "Neymar")
+	{
+		show_message("Parabens, voce acertou");
+	}
+	else
+	{
+		continue;	
+	}
+	var _cont3 = get_integer("Em que ano o Pele morreu", 0);
+	if(_cont3 != 2023)
+	{
+		var cont = get_integer("Voce erro tente novamente:",0);
+	}
+	if(_cont3 == 2023)
+	{
+		show_message("Parabens, voce acertou");
+	}
+	else
+	{
+		continue;		
+	}
+	
+	show_message("Finalizado");
+	break;
+}*/
