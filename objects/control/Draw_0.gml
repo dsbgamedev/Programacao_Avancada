@@ -11,6 +11,9 @@ draw_text(20,40, inventario[categoria][item]);
 */
 //Dsenhando o meu texto
 draw_set_color(global.cor);
+
+//O meu global texto vai ser a pergunta do quiz
+
 draw_text(20,20, global.texto);
 draw_set_color(-1);
 

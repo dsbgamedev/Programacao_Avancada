@@ -112,6 +112,64 @@ for(var i=0; i < array_length(frutas); i++)
 }
 
 */
+
+
+/*
+Estrutura do meu quiz
+	Quanto é 1 + 1?		Qual a capital do Brasil   Quanto é 3 x 2
+	3				    Brasilia					8
+	4					China						9
+	2					Aviao						Avião
+	0					Salvador					6
+
+*/
+
+
+//Criar um quiz
+quiz [0][0] = "Quanto é 1 + 1 ?"
+quiz [0][1] = 3;
+quiz [0][2] = 4;
+quiz [0][3] = 5;
+quiz [0][4] = 0;
+
+quiz [1][0] = "Qual a capital do Brasil ?"
+quiz [1][1] = "Brasilia";
+quiz [1][2] = "China";
+quiz [1][3] = "Aviao";
+quiz [1][4] = "Salvador";
+
+quiz [2][0] = "Quanto é 3 x 2 ?"
+quiz [2][1] = 6;
+quiz [2][2] = 9;
+quiz [2][3] = "Aviao";
+quiz [2][4] = 8;
+			    
+//show_message(quiz);
+			 
+//Deixando a pergunta aleatoria
+
+			 
+//A coluna do meu array2d
+pergunta = irandom(array_length(quiz)-1);		 
+
+//Deixando a ordem das perguntas aleatorias
+
+
+//Ajustando o meu global texto
+global.texto = quiz[pergunta][0];
+
+//Criando os botoes onde o texto dele são a possivel resposta
+//Pegando o tamanho do vetor da minha pergunta
+var _tam = array_length(quiz[pergunta]);
+for(var i = 1; i < _tam; i++ )
+{
+	//Criando o botao
+	var _botao = instance_create_layer(100 + i * 150,400, layer, obj_botao);
+	//Dando o texto do botao
+	_botao.texto = quiz[pergunta][i];
+}
+
+/*
 frutas = ["Morango","Banana","Uva","Morango","Limao"];
 //Dividindo a room em linhas colunas com base no tamanho da minha sprite do botao
 //Pegando as dimensoes da sprite do botao
