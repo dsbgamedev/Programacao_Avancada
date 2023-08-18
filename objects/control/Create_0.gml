@@ -131,10 +131,20 @@ for(var i = 1; i < _cols; i++)
 	//Eu vou rodar pelas linhas
 	for(var j = 0; j < _larg; j++)
 	{
+		//Ele apenas crie o botao SE o numero da coluna for impar
+		//E o numero da linha tbm for impar
+		if(i % 2 == 1 && j % 2 == 1)
+		{
 		//Criando um botao na posição da minha linha e da minha coluna
 		//Eu quero que ele nomei a linha e a coluna de cada botao'
 		var _botao = instance_create_layer(i * _larg,j * _alt,"Instances", obj_botao);
-		_botao.texto = string(i) + " , " + string(j);
+		
+		//Adicionando uma fruta ao botao
+		var _tam = array_length(frutas) -1;
+		//Garantindo que o indice nunca passe do limite do vetor
+		var _indice = i % array_length(frutas);
+		_botao.texto = frutas[_indice];
+		}
 	}
 		
 }
