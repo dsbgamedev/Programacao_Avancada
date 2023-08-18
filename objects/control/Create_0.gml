@@ -15,7 +15,7 @@ global.cor = c_white;
 	Punhal	 Sopa        Ombreira
 	Pedra	 Pedra       Pedra
 */
-
+/*
 inventario = [
 				["Armas","Espada","Cajado","Punhaç","Pedras"],
 				["Itens","Laranja","Chiclete","Sopa","Pedra"],
@@ -26,7 +26,7 @@ inventario = [
 
 categoria = 0;
 item = 1;
-
+*/
 
 /*
 //Categorias
@@ -50,7 +50,7 @@ inventario [2] = ["Equipamentos", "Escudo","Capacete", "Ombreira", "Pedra"];
 
 
 
-/*
+*/
 //Vetores Arrays
 //Uma variavel co varias informações dela
 
@@ -95,11 +95,8 @@ _media = _soma / array_length(notas);
 
 show_message(_media);
 
-
-
-
-
 /*
+
 frutas = ["Morango","Banana","Uva","Morango","Limao"];
 
 //Pegando o tamanho da sprite
@@ -114,8 +111,37 @@ for(var i=0; i < array_length(frutas); i++)
 	_botao.texto = frutas[i];
 }
 
+*/
 frutas = ["Morango","Banana","Uva","Morango","Limao"];
+//Dividindo a room em linhas colunas com base no tamanho da minha sprite do botao
+//Pegando as dimensoes da sprite do botao
+var _larg = sprite_get_width(spr_botao); //Pegando a altura
+var _alt  = sprite_get_height(spr_botao); //Pegando a largura
 
+//Quantas colunas a minha room tem
+var _cols = room_width div _larg;//dividindo o tamanho da minha room pela largura sprite
+
+//Quantas linhas a minha room tem
+var _lins = room_height div _alt;
+
+//Criar laços de repetição para percorrer as colunas e linha
+//Eu vou rodar pelas colunas
+for(var i = 1; i < _cols; i++)
+{
+	//Eu vou rodar pelas linhas
+	for(var j = 0; j < _larg; j++)
+	{
+		//Criando um botao na posição da minha linha e da minha coluna
+		//Eu quero que ele nomei a linha e a coluna de cada botao'
+		var _botao = instance_create_layer(i * _larg,j * _alt,"Instances", obj_botao);
+		_botao.texto = string(i) + " , " + string(j);
+	}
+		
+}
+
+/*
+
+frutas = ["Morango","Banana","Uva","Morango","Limao"];
 //Pegando o tamanho da sprite
 var _largura = sprite_get_width(spr_botao);
 var _altura = sprite_get_height(spr_botao);
@@ -129,8 +155,8 @@ for(var i=0; i < array_length(frutas); i++)
 }
 
 
-/*
 
+/*
 dias_da_semana = ["Segunda","Terça","Quarta","Quinta","Sexta","Sabado","Domingo"];
 //Pegando o tamanho do meu vetor
 var _tamanho = array_length(dias_da_semana);
