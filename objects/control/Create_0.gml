@@ -12,7 +12,33 @@ global.cor = c_white;
 var _senha = 0;
 var _senha_certa = 123;
 var _conta1 = "";
+*/
 
+var _indice, _n1, _n2, _n3;
+
+_indice = 1;
+
+//Iniciando as variaveis
+_n1 = 1;
+_n2 = 0;
+_n3 = 0;
+
+//Fazer a sequencia de fibonacci até o 20
+while(_indice < 20)
+{
+	//Somando n1 + n2
+	_n3 = _n1 + _n2;
+	//Fazendo o n1 e n2 avançarem
+	_n1 = _n2;
+	_n2 = _n3;
+	
+	//Exibindo o _n3
+	show_debug_message(_n3);
+	_indice++;
+}
+
+
+/*
 while(_senha != _senha_certa)
 {
 	//Pedindo a senha para o usuario
@@ -52,7 +78,7 @@ while(_senha != _senha_certa)
 	}
 	
 	
-}*/
+}
 //show_message("Voce acertou a senha...");
 
 //MOnte uma historia onde voce vai pedir informaçoes para o usuario ele so vai poder
@@ -62,7 +88,7 @@ while(_senha != _senha_certa)
 var _cont = 1994;
 var _texto = "";
 
-/*while(_cont != _texto)
+while(_cont != _texto)
 {
 	var _cont = get_integer("Qual foi o penultimo campeonato que o Brasil foi campeao mundial", 0);
 	if(_cont != 1994)
