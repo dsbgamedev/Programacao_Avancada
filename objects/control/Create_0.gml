@@ -6,14 +6,94 @@ global.texto = "Teste";
 
 global.cor = c_white;
 
-//Perguntar uma senha para a pessoa
-//Enquanto a pessoa nao acertar a senha, eu vou continuar pedindo a senha
-/*
-var _senha = 0;
-var _senha_certa = 123;
-var _conta1 = "";
-*/
 
+//Vetores Arrays
+//Uma variavel co varias informações dela
+
+//Calculando a nota de um aluno
+//Um vetor de notas
+//Eu vou perguntar se ele quer adicionar uma nota
+//Se sim, eu vou pedir a nota (que deve ser o numero)
+//Eu vou salvar essa nota no vetor de notas
+//Se não, eu paro de perguntar as notas e calculo a media dele(soma os valores e divide)
+//E apresento a media do aluno
+
+notas = [];
+var _indice = 0;
+while(true)
+{
+	var _adiciona = show_question("Voce quer adicionar alguma nota");
+	//Checando se ele falou sim ou nao
+	if(_adiciona)
+	{
+		//Se ele falou sim eu adiciono isso no meu vetor
+		notas[_indice] = get_integer("Digite sua nota",0);
+		//Incrementando o indice
+		_indice++ ;
+		//Recomeçando o laços de repetição
+		continue;
+	}
+	else
+	{
+		//A pessoa falou nao saiu do laço de repetição
+		break;
+	}
+}
+//Calcular a média do aluno
+var _soma = 0;
+for(var i = 0; i <array_length(notas) ;  i++)
+{
+	_soma += notas[i];
+}
+
+//Calculando a media de fato
+_media = _soma / array_length(notas);
+
+show_message(_media);
+
+
+
+
+
+/*
+frutas = ["Morango","Banana","Uva","Morango","Limao"];
+
+//Pegando o tamanho da sprite
+var _largura = sprite_get_width(spr_botao);
+var _espaco = 100;
+
+//Instanciando os botoes com o texto correto
+for(var i=0; i < array_length(frutas); i++)
+{
+	//instanciando o botao
+	var _botao = instance_create_layer(_espaco + (_largura * i ) + ( _espaco * i) ,400,layer, obj_botao);
+	_botao.texto = frutas[i];
+}
+
+
+
+/*
+
+dias_da_semana = ["Segunda","Terça","Quarta","Quinta","Sexta","Sabado","Domingo"];
+//Pegando o tamanho do meu vetor
+var _tamanho = array_length(dias_da_semana);
+
+for(i = 0; i < _tamanho; i++ )
+{
+	show_debug_message("Dias da semana :" + dias_da_semana[i]);
+}
+
+//Laço de repetição FOR
+//for(variavel, condição, incremento);
+//for(var i = 0; i < 10; i++ )
+//{
+//	show_message(i);
+	
+//}
+
+
+
+/*
 var _indice, _n1, _n2, _n3;
 
 _indice = 1;
@@ -36,7 +116,16 @@ while(_indice < 20)
 	show_debug_message(_n3);
 	_indice++;
 }
+*/
 
+
+//Perguntar uma senha para a pessoa
+//Enquanto a pessoa nao acertar a senha, eu vou continuar pedindo a senha
+/*
+var _senha = 0;
+var _senha_certa = 123;
+var _conta1 = "";
+*/
 
 /*
 while(_senha != _senha_certa)
