@@ -19,6 +19,23 @@ if(_mouse_sobre)
 		global.texto = texto;
 		//Definindo a cor global
 		global.cor = cor;
+		
+		//Eu vou checar se ele é o que tem  a resposta correta se sim eu mostro uma mensagem de paraben
+		//caso contratario eu mostro uma mensagem ofensiva!
+		if(certo)
+		{
+			//A pessoa acertou
+			show_message("Meus parabéns, mizerávil!");
+			 room_restart();
+		}
+		else
+		{
+			show_message("Voce errou hahahahah!!");
+			 room_restart();
+		}
+			
+			
+			
 	}
 }
 else

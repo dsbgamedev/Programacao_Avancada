@@ -127,7 +127,7 @@ Estrutura do meu quiz
 
 //Criar um quiz
 quiz [0][0] = "Quanto é 1 + 1 ?"
-quiz [0][1] = 3;
+quiz [0][1] = 2;
 quiz [0][2] = 4;
 quiz [0][3] = 5;
 quiz [0][4] = 0;
@@ -154,20 +154,36 @@ pergunta = irandom(array_length(quiz)-1);
 
 //Deixando a ordem das perguntas aleatorias
 
-
 //Ajustando o meu global texto
 global.texto = quiz[pergunta][0];
 
 //Criando os botoes onde o texto dele são a possivel resposta
 //Pegando o tamanho do vetor da minha pergunta
 var _tam = array_length(quiz[pergunta]);
+//Deixando a pergunta aleatoria
+var _perg = irandom(_tam);
 for(var i = 1; i < _tam; i++ )
 {
 	//Criando o botao
 	var _botao = instance_create_layer(100 + i * 150,400, layer, obj_botao);
 	//Dando o texto do botao
-	_botao.texto = quiz[pergunta][i];
+	
+	//Aumentando o valor da pergunta
+	_perg++;
+	//Limitando o valor do perg
+	_perg %= _tam - 1;
+	
+	//Se o valor do _peg for 1, entao esse botao e o que tem a resposta correta
+	if(_perg == 0)
+	{
+		_botao.certo = true;
+	}
+	
+	_botao.texto = quiz[pergunta][_perg + 1];
 }
+
+//Informar qual é o botao com a resposta certa
+
 
 /*
 frutas = ["Morango","Banana","Uva","Morango","Limao"];

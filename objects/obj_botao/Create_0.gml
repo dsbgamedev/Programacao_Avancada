@@ -3,7 +3,7 @@
 
 texto ="";
 cor   = c_white;
-
+certo = false;
 
 //Criar 5 Botões com os seguintes texto
 //Morango
