@@ -17,6 +17,8 @@
     {"name":"Timelines","order":8,"path":"folders/Timelines.yy",},
   ],
   "ResourceOrderSettings": [
+    {"name":"spr_quadrado","order":1,"path":"sprites/spr_quadrado/spr_quadrado.yy",},
+    {"name":"obj_quadrado","order":2,"path":"objects/obj_quadrado/obj_quadrado.yy",},
     {"name":"obj_botao","order":1,"path":"objects/obj_botao/obj_botao.yy",},
   ],
 }

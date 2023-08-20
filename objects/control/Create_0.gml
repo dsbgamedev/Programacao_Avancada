@@ -123,7 +123,7 @@ Estrutura do meu quiz
 	0					Salvador					6
 
 */
-
+/*
 //Criar um quiz
 quiz [0][0] = "Quanto é 1 + 1 ?"
 quiz [0][1] = 2;
@@ -152,7 +152,7 @@ quiz [2][4] = 8;
 			 
 //Deixando a pergunta aleatoria
 
-			 
+/*			 
 //A coluna do meu array2d
 //Checando se a variavel global.pergunta existe
 //Se sim eu nao crio ela, se nao eu crio
