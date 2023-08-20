@@ -26,15 +26,17 @@ if(_mouse_sobre)
 		{
 			//A pessoa acertou
 			show_message("Meus parabéns, mizerávil!");
-			 room_restart();
+			global.pergunta++;
+			//Garantindo que o valor nao passa de 2
+			global.pergunta %= 3;
+			room_restart();
 		}
 		else
 		{
 			show_message("Voce errou hahahahah!!");
-			 room_restart();
+			//room_restart();
 		}
-			
-			
+					
 			
 	}
 }

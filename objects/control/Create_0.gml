@@ -124,7 +124,6 @@ Estrutura do meu quiz
 
 */
 
-
 //Criar um quiz
 quiz [0][0] = "Quanto é 1 + 1 ?"
 quiz [0][1] = 2;
@@ -146,20 +145,37 @@ quiz [2][4] = 8;
 			    
 //show_message(quiz);
 			 
+			 
+//Façam com que depois de respoder CORRETAMENTE uma pergunta, o valor da
+//global.pergunta aumente (sempre dentro do limte)
+//E voce va para a proxima pergunta do quizz
+			 
 //Deixando a pergunta aleatoria
 
 			 
 //A coluna do meu array2d
-pergunta = irandom(array_length(quiz)-1);		 
+//Checando se a variavel global.pergunta existe
+//Se sim eu nao crio ela, se nao eu crio
+if(!variable_global_exists("pergunta"))
+{
+	global.pergunta = irandom(array_length(quiz)-1);	
+
+	show_message(global.pergunta);
+}
+
+//Se eu reinciar o jogo, todas as minhas variaveis (inclusive as globais)
+//Serão reiniciadas
+//Seu eu reinciar a minha room, todas as minhas variáveis (menos as globais)
+//Serão reiniciadas
 
 //Deixando a ordem das perguntas aleatorias
 
 //Ajustando o meu global texto
-global.texto = quiz[pergunta][0];
+global.texto = quiz[global.pergunta][0];
 
 //Criando os botoes onde o texto dele são a possivel resposta
 //Pegando o tamanho do vetor da minha pergunta
-var _tam = array_length(quiz[pergunta]);
+var _tam = array_length(quiz[global.pergunta]);
 //Deixando a pergunta aleatoria
 var _perg = irandom(_tam);
 for(var i = 1; i < _tam; i++ )
@@ -179,11 +195,10 @@ for(var i = 1; i < _tam; i++ )
 		_botao.certo = true;
 	}
 	
-	_botao.texto = quiz[pergunta][_perg + 1];
+	_botao.texto = quiz[global.pergunta][_perg + 1];
 }
 
 //Informar qual é o botao com a resposta certa
-
 
 /*
 frutas = ["Morango","Banana","Uva","Morango","Limao"];
