@@ -6,6 +6,57 @@ global.texto = "Teste";
 
 global.cor = c_white;
 
+
+
+//Funcoes e metodos
+//Metodos são funções de um objeto, são comportamentos
+///@method bom_dia({stringt} _mensagem1, {stringt} _mensagem2, {stringt}_mensagem3);
+/*bom_dia = function(_mensagem1, _mensagem2, _mensagem3)
+{
+	show_message(_mensagem1);
+	show_message(_mensagem2);
+	show_message(_mensagem3);
+	var _nome = get_string(_mensagem3, "");
+	
+	//Dando um retorno para uma função
+	return true;
+	
+}
+
+var _teste = bom_dia("bom dia","tudo bem com voce","qual o seu nome");
+show_message(_teste);
+*/
+//Quero criar uma funçao que retorna se o numero e impar ou par
+//Vou passar um numero
+//Ela vai retornar true se o numero for par e false se o numero for impar
+
+impar_ou_par = function(_n)
+{
+	//Checando se o _n é impar
+	var _temp = _n % 2;
+	//Se o _temp for 0, o valor é impar
+	//Se o _temp for 1, o valor é impar
+	
+	return _temp == 1;//True se o temp for 1, false se o temp for 0
+	
+	
+	/*if(_temp == 1)
+	{
+		return true;
+	}
+	else
+	{
+		return false;	
+	}*/
+	
+}
+
+show_message(impar_ou_par(69));
+
+
+
+
+
 //Vetores 2D
 /*
 				Inventario
@@ -42,12 +93,6 @@ inventario [0][4] = "Pedra";
 inventario [1] = ["Itens", "Laranja","Chiclete", "Sopa", "Pedra"];
 //Equipamentos
 inventario [2] = ["Equipamentos", "Escudo","Capacete", "Ombreira", "Pedra"];
-
-
-
-
-
-
 
 
 */
