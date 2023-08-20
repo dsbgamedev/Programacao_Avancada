@@ -8,6 +8,29 @@ global.cor = c_white;
 
 
 
+
+
+
+//Fatorial
+//show_message(fatorial(4));
+
+//Funções recursivas
+//Umafunção recursiva é uma função que vai retornar ela mesma
+
+//show_message(potencia(2,4));
+
+
+/*
+
+//Operador ternario
+//Ele vai checar se uma condição é verdadeira
+//Se sim ele faz uma coisa
+//Se nao ele faz outra
+//Teste logico ?  resposta caso verdadeira : resposta caso falso
+//var teste = 5 > 2 ? "Cinco é maior do que 2": "Cinco NÃO é maior do que 2";
+//show_message(teste);
+show_message(impar_ou_par(40));
+
 //Funcoes e metodos
 //Metodos são funções de um objeto, são comportamentos
 ///@method bom_dia({stringt} _mensagem1, {stringt} _mensagem2, {stringt}_mensagem3);
@@ -29,7 +52,7 @@ show_message(_teste);
 //Quero criar uma funçao que retorna se o numero e impar ou par
 //Vou passar um numero
 //Ela vai retornar true se o numero for par e false se o numero for impar
-
+/*
 impar_ou_par = function(_n)
 {
 	//Checando se o _n é impar
@@ -47,7 +70,7 @@ impar_ou_par = function(_n)
 	else
 	{
 		return false;	
-	}*/
+	}
 	
 }
 

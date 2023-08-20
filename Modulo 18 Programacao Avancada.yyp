@@ -35,6 +35,8 @@
   },
   "resources": [
     {"id":{"name":"spr_quadrado","path":"sprites/spr_quadrado/spr_quadrado.yy",},},
+    {"id":{"name":"comportamentos","path":"scripts/comportamentos/comportamentos.yy",},},
+    {"id":{"name":"obj_botao2","path":"objects/obj_botao2/obj_botao2.yy",},},
     {"id":{"name":"control","path":"objects/control/control.yy",},},
     {"id":{"name":"Note1","path":"notes/Note1/Note1.yy",},},
     {"id":{"name":"obj_quadrado","path":"objects/obj_quadrado/obj_quadrado.yy",},},
